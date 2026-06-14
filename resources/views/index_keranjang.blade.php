@@ -4,13 +4,6 @@
 @section('title', 'Data Keranjang')
 @section('konten')
     <center>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
 
         <table class="table table-striped table-hover">
             <tr>

@@ -6,8 +6,9 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\keranjangController;
-
-
+use App\Http\Controllers\berasController;
+use App\Http\Controllers\nilaiController;
+use App\Http\Controllers\SiswaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -80,5 +81,24 @@ Route::get('/keranjangbeli/{id}', [keranjangController::class, 'beli']);
 Route::post('/keranjangstore', [keranjangController::class, 'storeKeranjang']);
 Route::get('/keranjangbatal/{id}', [keranjangController::class, 'batal']);
 
+//crud tabel beras
+Route::get('/beras', [berasController::class, 'indexBeras']);
+Route::get('/beras_tambah', [berasController::class, 'tambahBeras']);
+Route::post('/beras_store', [berasController::class, 'storeBeras']);
+Route::get('/beras_edit/{id}', [berasController::class, 'editBeras']);
+Route::post('/beras_update', [berasController::class, 'updateBeras']);
+Route::get('/beras_hapus/{id}', [berasController::class, 'hapusBeras']);
+Route::get('/beras_cari', [berasController::class, 'cariBeras']);
 
+//crud tabel nilaikuliah
+Route::get('/nilaikuliah', [nilaiController::class, 'indexNilai']);
+Route::get('/nilai_tambah', [nilaiController::class, 'tambahNilai']);
+Route::post('/nilai_store', [nilaiController::class, 'storeNilai']);
 
+//crud tabel siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');

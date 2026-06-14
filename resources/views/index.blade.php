@@ -4,13 +4,6 @@
 @section('title', 'Data Pegawai')
 @section('konten')
     <center>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
         <p>Cari Data Pegawai :</p>
         <form action="/pegawaicari" method="GET">
             <input type="text" name="cari" placeholder="Cari Pegawai .." class="form-control">

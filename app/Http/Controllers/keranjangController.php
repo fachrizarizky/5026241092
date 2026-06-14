@@ -35,7 +35,7 @@ class keranjangController extends Controller
 		DB::table('keranjangbelanja')->insert([
 			'KodeBarang' => $request->kode,
 			'Jumlah' => $request->jumlah,
-			'Harga' => $request->harga,
+			'Harga' => $request->harga
 		]);
 		// alihkan halaman ke halaman keranjang
 		return redirect('/keranjangbelanja');
