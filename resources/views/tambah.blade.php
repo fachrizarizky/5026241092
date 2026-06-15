@@ -6,8 +6,6 @@
 <!-- cara penulisan isi section yang panjang -->
 @section('konten')
     <center>
-
-
         <br />
         <br />
 
